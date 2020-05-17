@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	{% load bootstrap4 %}
+	<script src="{% bootstrap_jquery_url %}"></script>
+	{% bootstrap_javascript %}
+	{% bootstrap_css %}
+	<meta charset="UTF-8">
+	<title>{% block title %}ВКР ЗСС{% endblock %}</title>
+</head>
+<body>
+	{% block content %}
+	{% endblock %}
+</body>
+</html>
