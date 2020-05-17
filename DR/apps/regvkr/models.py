@@ -7,7 +7,7 @@ class Student(models.Model):
 	last_name_S = models.CharField('Фамилия:', max_length=25)
 	num = models.PositiveIntegerField('Номер зачётной книжки:', unique=True)  # to confirm
 	group = models.CharField('Группа:', max_length=8)
-	user = models.OneToOneField(User)
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 	def __str__(self):
 		template = '{0.last_name_S} {0.first_name_S} {0.group}'
@@ -36,7 +36,7 @@ class ScientificDirector(models.Model):
 	last_name_D = models.CharField('Фамилия:', max_length=25)
 	first_name_D = models.CharField('Имя:', max_length=15)
 	patronymic = models.CharField('Отчество:', max_length=25, null=True)
-	user = models.OneToOneField(User)
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 	def __str__(self):
 		template = '{0.last_name_D} {0.first_name_D} {0.patronymic}'
