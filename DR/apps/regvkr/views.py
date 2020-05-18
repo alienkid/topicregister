@@ -7,11 +7,6 @@ class TopicList(generics.ListCreateAPIView):
     queryset = Topic.objects.all()
     serializer_class = TopicSerializer
 
-class TopicDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Topic.objects.all()
-    serializer_class = TopicSerializer
-
-
 class ApplicationAdd(generics.CreateAPIView):
     queryset = Application.objects.all()
     serializer_class = ApplicationSerializer
