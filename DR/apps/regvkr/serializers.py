@@ -11,9 +11,6 @@ class ApplicationSerializer(serializers.ModelSerializer):
         model = Application
         fields = '__all__'
 
-    # def create(self, validated_data):
-    #     return Application.objects.create(**validated_data)
-
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
